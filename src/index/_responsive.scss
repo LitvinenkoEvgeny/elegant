@@ -1,0 +1,212 @@
+@media screen and(min-width: 1024px) {
+  .only__sm {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+
+  //==================================================================================
+  // settings
+  //==================================================================================
+
+  $susy: (
+          container: 750,
+          container-position: center,
+          columns: 12,
+          gutters: .25,
+          debug: (
+                  image: hide,
+                  color: rgba(#66f, .25),
+                  output: background,
+                  toggle: top right,
+          ),
+  );
+  @include layout($susy float inside);
+
+  .container {
+    @include container(750px);
+  }
+  .inner__container {
+    @include container(750px);
+  }
+  html {
+    overflow-x: hidden;
+  }
+
+  //==================================================================================
+  // End of settings
+  //==================================================================================
+
+  //==================================================================================
+  // common
+  //==================================================================================
+
+  .little__heading {
+    font-size: 28px;
+  }
+  .big__heading {
+    font-size: 90px;
+    font-weight: bold;
+  }
+  .text__content {
+    font-size: 29px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  //==================================================================================
+  // End of common
+  //==================================================================================
+
+  //==================================================================================
+  // header section
+  //==================================================================================
+
+  .header__bg {
+    background-image: url("images/header-mobile-bg.jpg");
+    background-size: 1336px 1336px;
+    background-position-x: -350px;
+    padding-bottom: 488px;
+  }
+
+  .nav__logo {
+    @include clearfix();
+    @include span(12);
+    padding: 0;
+    height: 110px;
+    background-color: rgba(84, 90, 91, .7);
+  }
+  .logo {
+    @include clearfix();
+    margin-top: 10px;
+    margin-left: 15px;
+    height: 100px;
+    display: inline-block;
+    font-size: 3em;
+  }
+  .logo__symbol {
+    width: 84px;
+    height: 84px;
+    line-height: 84px;
+  }
+  .logo__text {
+    padding-top: 23px;
+  }
+  .menu {
+    background-color: rgba(38, 49, 54, .7);
+    height: 100%;
+    width: 90px;
+    text-align: center;
+    span {
+      display: none;
+    }
+  }
+  .menu__icon {
+    font-size: 80px;
+  }
+  .header__text {
+    font-size: 95px;
+    text-align: center;
+    margin-left: 25px;
+    padding-top: 510px;
+    padding-bottom: 25px;
+  }
+  .arrow__down {
+    font-size: 95px;
+    color: #ffffff;
+    width: 66px;
+    height: 66px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    i {
+      position: absolute;
+      top: -11px;
+      left: 3px;
+    }
+  }
+
+  //==================================================================================
+  // End of header section
+  //==================================================================================
+
+  //==================================================================================
+  // about section
+  //==================================================================================
+
+  .about__heading {
+    @extend .little__heading;
+  }
+  .about__second__heading {
+    @extend .big__heading;
+  }
+  .about__text {
+    @extend .text__content;
+    font-weight: 300;
+  }
+  .about__button {
+    width: 450px;
+    height: 110px;
+    font-size: 27px;
+    font-family: OpenSansLight sans-serif;
+  }
+  //==================================================================================
+  // End of about section
+  //==================================================================================
+
+  //==================================================================================
+  // what we do section
+  //==================================================================================
+
+  .about__works {
+    @extend .little__heading;
+  }
+  .about__portfolio {
+    @extend .big__heading;
+    padding-top: 80px;
+  }
+  .portfolio__items {
+    margin-left: 0;
+  }
+  .portfolio__item {
+    img {
+      @include span(12);
+      height: 560px;
+      margin-bottom: 8px;
+    }
+  }
+  //==================================================================================
+  // End of what we do section
+  //==================================================================================
+
+  //==================================================================================
+  // who we are section
+  //==================================================================================
+
+  .who__we__heading {
+    @extend .little__heading;
+  }
+  .who__we__second__heading {
+    @extend .big__heading;
+  }
+  .who__we__text {
+    @extend .text__content;
+  }
+  .team__item {
+    @include span(11);
+  }
+  .team__item__image {
+    width: 631px;
+    height: 530px;
+    margin-left: 35px;
+    padding-right: 35px;
+    background-size: cover;
+  }
+  //==================================================================================
+  // End of who we are section
+  //==================================================================================
+
+}

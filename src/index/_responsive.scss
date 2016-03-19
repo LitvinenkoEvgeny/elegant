@@ -122,6 +122,7 @@
     text-align: center;
     margin: 0 auto;
     position: relative;
+    cursor: pointer;
     i {
       position: absolute;
       top: -11px;
@@ -194,19 +195,168 @@
   }
   .who__we__text {
     @extend .text__content;
+    margin-bottom: 130px;
   }
   .team__item {
+    &:last-child {
+      float: left;
+      @include span(11);
+      padding-left: 55px;
+      padding-right: 35px;
+    }
     @include span(11);
+    padding-left: 55px;
+    padding-right: 35px;
   }
   .team__item__image {
     width: 631px;
     height: 530px;
-    margin-left: 35px;
-    padding-right: 35px;
     background-size: cover;
+  }
+
+  .team__descr {
+    background-color: #f9f9f9;
+    width: 601px;
+    text-align: left;
+    padding-left: 30px;
+    padding-bottom: 100px;
+    margin-bottom: 60px;
+  }
+  .tag {
+    @extend .little__heading;
+  }
+  .team__member__name{
+    @extend .big__heading;
+    font-size: 40px;
+  }
+  .team__member__descr{
+    @extend .text__content;
+    padding-left: 0;
   }
   //==================================================================================
   // End of who we are section
   //==================================================================================
+
+  //==================================================================================
+  // blog section
+  //==================================================================================
+
+  .blog {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .blog__heading{
+    @extend .little__heading;
+  }
+  .blog__second__heading{
+    @extend .big__heading;
+  }
+  .article__image__wrapper{
+    @include span(12);
+    padding: 0;
+  }
+  .article__image{
+    @include span(12);
+    background-size: cover;
+  }
+  .article__description{
+    @include span(12);
+    padding-left: 70px;
+    padding-top: 100px;
+    padding-right: 122px;
+    padding-bottom: 666px;
+  }
+  .article__date{
+    font-size: 28px;
+    text-transform: uppercase;
+  }
+  .article__header{
+    font-size: 60px;
+  }
+  .article__text{
+    padding-top: 70px;
+    font-size: 29px;
+  }
+  .article__read{
+    width: 250px;
+    height: 100px;
+    font-size: 29px;
+    margin-top: 100px;
+  }
+  .read__blog{
+    margin-top: 80px;
+    width: 455px;
+    height: 110px;
+    font-size: 29px;
+    margin-left: span(2);
+  }
+  //==================================================================================
+  // End of blog section
+  //==================================================================================
+
+  //==================================================================================
+  // contact us section
+  //==================================================================================
+  .contact {
+    @include span(12);
+    padding-left: 35px;
+    padding-right: 35px;
+    background-color: #ffffff;
+  }
+  .contact__heading{
+    @extend .little__heading;
+  }
+  .contact__second__heading{
+    @extend .big__heading;
+  }
+  .map__wrapper {
+    padding-top: 80px;
+  }
+  .contact__divs__wrapper {
+    background-color: #f9f9f9;
+    @include clearfix();
+  }
+  .contact__div{
+    padding-right: 0;
+    &--second {
+      @include span(6 last);
+    }
+  }
+  .contact__type{
+    padding-top: 70px;
+    margin-bottom: 30px;
+  }
+
+  //==================================================================================
+  // End of contact us section
+  //==================================================================================
+
+
+  //==================================================================================
+  // footer section
+  //==================================================================================
+
+  .footer {
+    @include span(12);
+    padding-left: 35px;
+    padding-right: 35px;
+    height: 230px;
+    line-height: normal;
+  }
+  .footer__info{
+    @include span(12);
+    padding-top: 80px;
+    font-size: 30px;
+  }
+  .footer__email{
+    @include span(12);
+    font-size: 30px;
+    padding-top: 40px;
+  }
+
+  //==================================================================================
+  // End of footer section
+  //==================================================================================
+
 
 }

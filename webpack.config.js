@@ -10,8 +10,6 @@ module.exports = {
   devTool: "source-map",
   output: {
     path: __dirname + "/dist",
-    publicPath: '/dist/',
-    contentBase: __dirname + '/dist/',
     filename: '[name].js'
   },
   module: {
@@ -36,6 +34,7 @@ module.exports = {
       {
         test: /\.scss$/,
         loaders: ["style", "css", "sass"]
+        //loader: ExtractTextPlugin.extract("style-loader", "css-loader!sass-loader")
       },
       {test: /\.(otf|gif|png|jpg|JPG)$/, loader: "url-loader"},
       {
@@ -56,5 +55,8 @@ module.exports = {
       }
     ]
   }
+  //plugins: [
+  //  new ExtractTextPlugin("[name].css")
+  //]
 };
 

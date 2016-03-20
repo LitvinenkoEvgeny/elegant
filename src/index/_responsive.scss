@@ -4,6 +4,154 @@
   }
 }
 
+@media screen and (max-width: 1356px) {
+  .header__text {
+    padding-bottom: 350px;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  $susy: (
+          container: 1120,
+          container-position: center,
+          columns: 12,
+          gutters: .25,
+          debug: (
+                  image: hide,
+                  color: rgba(#66f, .25),
+                  output: background,
+                  toggle: top right,
+          ),
+  );
+  @include layout($susy float inside);
+
+  .container {
+    @include container(1120px);
+  }
+  .inner__container {
+    @include container(1120px);
+  }
+  .nav__logo {
+    @include span(12);
+    @include clearfix();
+    display: inline-block;
+  }
+  .logo {
+    @include clearfix();
+    @include span(3);
+    margin-left: span(1);
+  }
+  .menu {
+    margin-right: span(1);
+  }
+  .header__text {
+    padding-top: 300px;
+    padding-bottom: 345px;
+  }
+  .portfolio__items {
+    margin-left: 40px;
+  }
+  .portfolio__item img {
+    height: 230px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  $susy: (
+          container: 950,
+          container-position: center,
+          columns: 12,
+          gutters: .25,
+          debug: (
+                  image: hide,
+                  color: rgba(#66f, .25),
+                  output: background,
+                  toggle: top right,
+          ),
+  );
+  @include layout($susy float inside);
+
+  .container {
+    @include container(950px);
+  }
+  .inner__container {
+    @include container(950px);
+  }
+  .nav__logo {
+    @include span(12);
+    @include clearfix();
+    display: inline-block;
+  }
+  .logo {
+    @include clearfix();
+    @include span(3);
+    margin-left: span(1);
+  }
+  .menu {
+    margin-right: span(1);
+  }
+  .header__text {
+    font-size: 70px;
+    margin-left: 60px;
+    padding-top: 300px;
+    padding-bottom: 235px;
+  }
+  .portfolio__items {
+    margin-left: 40px;
+  }
+  .portfolio__item img {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  $susy: (
+          container: 800,
+          container-position: center,
+          columns: 12,
+          gutters: .25,
+          debug: (
+                  image: hide,
+                  color: rgba(#66f, .25),
+                  output: background,
+                  toggle: top right,
+          ),
+  );
+  @include layout($susy float inside);
+
+  .container {
+    @include container(800px);
+  }
+  .inner__container {
+    @include container(800px);
+  }
+  .nav__logo {
+    @include span(12);
+    @include clearfix();
+    display: inline-block;
+  }
+  .logo {
+    @include clearfix();
+    @include span(4);
+    margin-left: span(1);
+  }
+  .menu {
+    margin-right: span(1);
+  }
+  .header__text {
+    font-size: 65px;
+    margin-left: 5px;
+    padding-top: 220px;
+    padding-bottom: 140px;
+  }
+  .portfolio__items {
+    margin-left: 40px;
+  }
+  .portfolio__item img {
+    height: 180px;
+  }
+}
+
 @media screen and (max-width: 750px) {
 
   //==================================================================================
@@ -51,7 +199,7 @@
   }
   .text__content {
     font-size: 29px;
-    padding-left: 40px;
+    padding-top: 220px;
     padding-right: 40px;
   }
 
@@ -79,6 +227,7 @@
   }
   .logo {
     @include clearfix();
+    @include span(8);
     margin-top: 10px;
     margin-left: 15px;
     height: 100px;
@@ -94,6 +243,7 @@
     padding-top: 23px;
   }
   .menu {
+    margin-right: 0;
     background-color: rgba(38, 49, 54, .7);
     height: 100%;
     width: 90px;
@@ -225,11 +375,11 @@
   .tag {
     @extend .little__heading;
   }
-  .team__member__name{
+  .team__member__name {
     @extend .big__heading;
     font-size: 40px;
   }
-  .team__member__descr{
+  .team__member__descr {
     @extend .text__content;
     padding-left: 0;
   }
@@ -245,45 +395,45 @@
     padding-left: 32px;
     padding-right: 32px;
   }
-  .blog__heading{
+  .blog__heading {
     @extend .little__heading;
   }
-  .blog__second__heading{
+  .blog__second__heading {
     @extend .big__heading;
   }
-  .article__image__wrapper{
+  .article__image__wrapper {
     @include span(12);
     padding: 0;
   }
-  .article__image{
+  .article__image {
     @include span(12);
     background-size: cover;
   }
-  .article__description{
+  .article__description {
     @include span(12);
     padding-left: 70px;
     padding-top: 100px;
     padding-right: 122px;
     padding-bottom: 666px;
   }
-  .article__date{
+  .article__date {
     font-size: 28px;
     text-transform: uppercase;
   }
-  .article__header{
+  .article__header {
     font-size: 60px;
   }
-  .article__text{
+  .article__text {
     padding-top: 70px;
     font-size: 29px;
   }
-  .article__read{
+  .article__read {
     width: 250px;
     height: 100px;
     font-size: 29px;
     margin-top: 100px;
   }
-  .read__blog{
+  .read__blog {
     margin-top: 80px;
     width: 455px;
     height: 110px;
@@ -303,10 +453,10 @@
     padding-right: 35px;
     background-color: #ffffff;
   }
-  .contact__heading{
+  .contact__heading {
     @extend .little__heading;
   }
-  .contact__second__heading{
+  .contact__second__heading {
     @extend .big__heading;
   }
   .map__wrapper {
@@ -316,13 +466,13 @@
     background-color: #f9f9f9;
     @include clearfix();
   }
-  .contact__div{
+  .contact__div {
     padding-right: 0;
     &--second {
       @include span(6 last);
     }
   }
-  .contact__type{
+  .contact__type {
     padding-top: 70px;
     margin-bottom: 30px;
   }
@@ -330,7 +480,6 @@
   //==================================================================================
   // End of contact us section
   //==================================================================================
-
 
   //==================================================================================
   // footer section
@@ -343,12 +492,12 @@
     height: 230px;
     line-height: normal;
   }
-  .footer__info{
+  .footer__info {
     @include span(12);
     padding-top: 80px;
     font-size: 30px;
   }
-  .footer__email{
+  .footer__email {
     @include span(12);
     font-size: 30px;
     padding-top: 40px;
@@ -358,5 +507,222 @@
   // End of footer section
   //==================================================================================
 
+}
 
+@media screen and (max-width: 595px) {
+  $susy: (
+          container: 595,
+          container-position: center,
+          columns: 12,
+          gutters: .25,
+          debug: (
+                  image: hide,
+                  color: rgba(#66f, .25),
+                  output: background,
+                  toggle: top right,
+          ),
+  );
+  @include layout($susy float inside);
+
+  .container {
+    @include container(595px);
+  }
+  .inner__container {
+    @include container(595px);
+  }
+  .header__text {
+    margin-left: 0;
+    padding-bottom: 70px;
+  }
+  .about__text {
+    padding-top: 150px;
+  }
+  .who__we__text {
+    padding-top: 150px;
+  }
+  .team__item {
+    @include span(12);
+    padding-left: 0;
+    margin-right: 0;
+    &:last-child {
+      @include span(12);
+      padding-left: 0;
+      margin-right: 0;
+    }
+  }
+  .team__item__image {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .team__descr {
+    max-width: 100%;
+    max-height: 100%;
+    width: 95%;
+  }
+  .blog {
+    padding-top: 80px;
+  }
+  .read__blog {
+    margin-left: span(1);
+  }
+}
+
+@media screen and (max-width: 530px) {
+  $susy: (
+          container: 530,
+          container-position: center,
+          columns: 12,
+          gutters: .25,
+          debug: (
+                  image: hide,
+                  color: rgba(#66f, .25),
+                  output: background,
+                  toggle: top right,
+          ),
+  );
+  @include layout($susy float inside);
+
+  .container {
+    @include container(530px);
+  }
+  .inner__container {
+    @include container(530px);
+  }
+  .article__description {
+    padding-bottom: 776px;
+  }
+  .read__blog {
+    margin-left: 0;
+    margin-top: 150px;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  $susy: (
+          container: 480,
+          container-position: center,
+          columns: 12,
+          gutters: .25,
+          debug: (
+                  image: hide,
+                  color: rgba(#66f, .25),
+                  output: background,
+                  toggle: top right,
+          ),
+  );
+  @include layout($susy float inside);
+
+  .container {
+    @include container(480px);
+  }
+  .inner__container {
+    @include container(480px);
+  }
+  .header__bg {
+    padding-bottom: 398px;
+  }
+
+  .logo__text {
+    font-size: 43px;
+  }
+
+  .who__we__text {
+    padding-right: 0;
+  }
+  .team__descr {
+    width: 93%;
+  }
+  .team__member__descr {
+    padding-top: 60px;
+  }
+  .article__description {
+    padding-left: 45px;
+    padding-right: 40px;
+    padding-bottom: 686px;
+  }
+  .read__blog {
+    @include span(11);
+    height: 120px;
+  }
+  .footer {
+    height: 100%;
+  }
+  .contact__div {
+    @include span(12);
+  }
+  .phone {
+    padding-top: 10px;
+  }
+}
+@media screen and (max-width: 383px) {
+  $susy: (
+          container: 383,
+          container-position: center,
+          columns: 12,
+          gutters: .25,
+          debug: (
+                  image: hide,
+                  color: rgba(#66f, .25),
+                  output: background,
+                  toggle: top right,
+          ),
+  );
+  @include layout($susy float inside);
+
+  .container {
+    @include container(383px);
+  }
+  .inner__container {
+    @include container(383px);
+  }
+  .header__bg{
+    background-position-x: -630px;
+    padding-bottom: 365px;
+  }
+  .logo__symbol{
+    display: none;
+  }
+  .about__text{
+    padding-right: 0;
+    padding-top: 70px;
+  }
+  .about__button{
+    width: 320px;
+  }
+  .who__we__second__heading{
+    font-size: 80px;
+  }
+  .about__portfolio{
+    @include span(12);
+    font-size: 80px;
+  }
+  .portfolio__item img{
+    height: 400px;
+  }
+  .team__descr{
+    padding-left: 10px;
+    padding-right: 15px;
+  }
+  .blog {
+    @include span(12);
+  }
+  .article__description{
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 750px;
+  }
+  .read__blog{
+    margin-left: span(.4);
+  }
+  .footer{
+    padding-left: 5px;
+    padding-right: 0;
+  }
+  .footer__info{
+    font-size: 25px;
+  }
+  .footer__email{
+    font-size: 25px;
+  }
 }

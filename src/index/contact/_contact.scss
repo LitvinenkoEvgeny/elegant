@@ -36,14 +36,14 @@
 }
 
 .contact__header {
-  font-family: OpenSansSemibold sans-serif;
+  font-family: OpenSansSemibold;
   color: $blueTextColor;
   font-weight: bold;
   font-size: 13px;
   text-transform: uppercase;
 }
 .contact__text {
-  font-family: OpenSansLight sans-serif;
+  font-family: OpenSansLight;
   color: $blueTextColor;
   font-size: 19px;
 }
@@ -55,7 +55,7 @@
 }
 
 .footer__text {
-  font-family: OpenSansLight sans-serif;
+  font-family: OpenSansLight;
   color: $blueTextColor;
   font-size: 16px;
 }
@@ -68,6 +68,7 @@
 }
 .footer__info {
   @extend .footer__text;
+  float: left;
 }
 .footer__email {
   @extend .footer__text;

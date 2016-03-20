@@ -2,27 +2,27 @@ $header__linkColor: #d4af37;
 $blueTextColor: rgba(2, 23, 37, .7);
 
 .header__link {
-  font-family: OpenSansSemibold sans-serif;
+  font-family: OpenSansSemibold;
   color: $header__linkColor;
   font-size: 13px;
   text-transform: uppercase;
 }
 
 .section__header {
-  font-family: OpenSansSemibold sans-serif;
+  font-family: OpenSansSemibold;
   color: $blueTextColor;
   font-size: 44px;
 }
 
 .section__text {
   font-size: 18px;
-  font-family: OpenSansLight sans-serif;
+  font-family: OpenSansLight;
   color: $blueTextColor;
 }
 
 .button__text {
   font-size: 14px;
-  font-family: OpenSansLight sans-serif;
+  font-family: OpenSansLight;
   color: $blueTextColor;
 }
 

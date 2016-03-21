@@ -9,6 +9,8 @@ import about from './index/about/about.js';
 import blog from './index/blog/blog.js';
 import contact from './index/contact/contact.js';
 
+initMap();
+
 
 
 

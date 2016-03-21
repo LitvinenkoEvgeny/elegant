@@ -360,11 +360,13 @@
     &:last-child {
       float: left;
       margin-left: span(.5);
-      padding: 0;
       @include span(11);
+      padding-left: 0;
+      padding-right: 0;
     }
     @include span(11);
-    padding: 0;
+    padding-left: 0;
+    padding-right: 0;
     margin-left: span(.5);
   }
   .team__item__image {
@@ -544,6 +546,7 @@
   .header__text {
     margin-left: 0;
     padding-bottom: 70px;
+    font-size: 75px;
   }
   .about__text {
     padding-top: 150px;
@@ -552,29 +555,45 @@
     padding-top: 150px;
   }
   .team__item {
-    @include span(12);
+    @include span(11);
+    margin-bottom: 10px;
+    margin-left: span(.5);
+    margin-right: span(.5);
+    padding-right: 0;
     padding-left: 0;
-    margin-right: 0;
     &:last-child {
-      @include span(12);
+      @include span(11);
+      padding-right: 0;
       padding-left: 0;
-      margin-right: 0;
     }
   }
-  .team__item__image {
-    max-height: 100%;
-    max-width: 100%;
+  .article__description{
+    padding-left: 30px;
+    padding-top: 50px;
+    padding-right: 80px;
+  }
+  .team__descr{
+    padding-bottom: 20px;
+  }
+  .team__member__descr{
+    padding-top: 50px;
+  }
+  .about__text{
+    @include span(12);
+    padding-top: 80px;
   }
   .team__descr {
     max-width: 100%;
     max-height: 100%;
-    width: 95%;
+    width: 94%;
   }
   .blog {
     padding-top: 80px;
   }
   .read__blog {
-    margin-left: span(1);
+    @include span(11);
+    margin-left: span(.5);
+    margin-right: span(.5);
   }
 }
 
@@ -602,11 +621,100 @@
   .article__description {
     padding-bottom: 776px;
   }
-  .read__blog {
-    margin-left: 0;
-    margin-top: 150px;
+  .team__descr{
+    width: 93.4%;
   }
+  .contact__div {
+    @include span(12);
+  }
+  .phone {
+    padding-top: 10px;
+  }
+  .footer {
+    height: 100%;
+  }
+}
+@media screen and (max-width: 483px) {
+  $susy: (
+          container: 383,
+          container-position: center,
+          columns: 12,
+          gutters: .25,
+          debug: (
+                  image: hide,
+                  color: rgba(#66f, .25),
+                  output: background,
+                  toggle: top right,
+          ),
+  );
+  @include layout($susy float inside);
 
+  .container {
+    @include container(383px);
+  }
+  .inner__container {
+    @include container(383px);
+  }
+  .header__bg {
+    background-position-x: -630px;
+    padding-bottom: 365px;
+  }
+  .logo__symbol {
+    display: none;
+  }
+  .about__text {
+    padding-right: 0;
+    padding-top: 70px;
+  }
+  .about__button {
+    width: 320px;
+  }
+  .who__we__second__heading {
+    font-size: 80px;
+  }
+  .about__portfolio {
+    @include span(12);
+    font-size: 80px;
+  }
+  .portfolio__item img {
+    height: 400px;
+  }
+  .team__member{
+    &--1 {
+      background-position-x: -100px;
+    }
+    &--2 {
+      background-position-x: -151px;
+    }
+    &--3 {
+      background-position-x: -140px;
+    }
+  }
+  .team__descr {
+    padding-left: 10px;
+    padding-right: 15px;
+  }
+  .blog {
+    @include span(12);
+  }
+  .article__description {
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 750px;
+  }
+  .read__blog {
+    margin-left: span(.4);
+  }
+  .footer {
+    padding-left: 5px;
+    padding-right: 0;
+  }
+  .footer__info {
+    font-size: 25px;
+  }
+  .footer__email {
+    font-size: 25px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -656,18 +764,9 @@
     @include span(11);
     height: 120px;
   }
-  .footer {
-    height: 100%;
-  }
-  .contact__div {
-    @include span(12);
-  }
-  .phone {
-    padding-top: 10px;
-  }
 }
 
-@media screen and (max-width: 483px) {
+@media screen and (max-width: 383px) {
   $susy: (
           container: 383,
           container-position: center,
@@ -688,53 +787,44 @@
   .inner__container {
     @include container(383px);
   }
-  .header__bg {
-    background-position-x: -630px;
-    padding-bottom: 365px;
+  .team__member{
+    &--1{
+      background-position-x: -150px;
+    }
+    &--2 {
+      background-position-x: -200px;
+    }
+    &--3{
+      background-position-x: -180px;
+    }
   }
-  .logo__symbol {
-    display: none;
-  }
-  .about__text {
-    padding-right: 0;
-    padding-top: 70px;
-  }
-  .about__button {
-    width: 320px;
-  }
-  .who__we__second__heading {
-    font-size: 80px;
-  }
-  .about__portfolio {
-    @include span(12);
-    font-size: 80px;
-  }
-  .portfolio__item img {
-    height: 400px;
-  }
-  .team__descr {
+  .article__description{
     padding-left: 10px;
-    padding-right: 15px;
+    padding-right: 20px;
   }
-  .blog {
+  .team{
+    @include clearfix();
     @include span(12);
-  }
-  .article__description {
-    padding-left: 20px;
-    padding-right: 10px;
-    padding-bottom: 750px;
-  }
-  .read__blog {
-    margin-left: span(.4);
-  }
-  .footer {
-    padding-left: 5px;
     padding-right: 0;
   }
-  .footer__info {
-    font-size: 25px;
+  .team__item {
+    @include span(12);
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+    &:last-child{
+      @include span(12);
+      margin-left: 0;
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
-  .footer__email {
-    font-size: 25px;
+  .blog{
+    @include span(12);
+    padding-right: 0;
+  }
+  .contact{
+    @include span(12);
+    padding-right: 0;
   }
 }

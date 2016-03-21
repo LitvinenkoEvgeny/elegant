@@ -1,6 +1,5 @@
 maket
 src
-dist
 webpack.config.js
 node_modules
 .idea

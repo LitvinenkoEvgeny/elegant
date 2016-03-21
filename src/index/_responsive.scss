@@ -144,11 +144,18 @@
     padding-top: 220px;
     padding-bottom: 140px;
   }
+  .team__item__image {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    height: 100%;
+  }
   .portfolio__items {
     margin-left: 40px;
   }
   .portfolio__item img {
-    height: 180px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -325,6 +332,8 @@
   .portfolio__item {
     img {
       @include span(12);
+      padding-left: 0;
+      padding-right: 0;
       height: 560px;
       margin-bottom: 8px;
     }
@@ -350,17 +359,21 @@
   .team__item {
     &:last-child {
       float: left;
+      margin-left: span(.5);
       @include span(11);
-      padding-left: 55px;
-      padding-right: 35px;
+      padding-left: 0;
+      padding-right: 0;
     }
     @include span(11);
-    padding-left: 55px;
-    padding-right: 35px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: span(.5);
   }
   .team__item__image {
-    width: 631px;
     height: 530px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
     background-size: cover;
   }
 
@@ -533,6 +546,7 @@
   .header__text {
     margin-left: 0;
     padding-bottom: 70px;
+    font-size: 75px;
   }
   .about__text {
     padding-top: 150px;
@@ -541,29 +555,45 @@
     padding-top: 150px;
   }
   .team__item {
-    @include span(12);
+    @include span(11);
+    margin-bottom: 10px;
+    margin-left: span(.5);
+    margin-right: span(.5);
+    padding-right: 0;
     padding-left: 0;
-    margin-right: 0;
     &:last-child {
-      @include span(12);
+      @include span(11);
+      padding-right: 0;
       padding-left: 0;
-      margin-right: 0;
     }
   }
-  .team__item__image {
-    max-height: 100%;
-    max-width: 100%;
+  .article__description {
+    padding-left: 30px;
+    padding-top: 50px;
+    padding-right: 80px;
+  }
+  .team__descr {
+    padding-bottom: 20px;
+  }
+  .team__member__descr {
+    padding-top: 50px;
+  }
+  .about__text {
+    @include span(12);
+    padding-top: 80px;
   }
   .team__descr {
     max-width: 100%;
     max-height: 100%;
-    width: 95%;
+    width: 94%;
   }
   .blog {
     padding-top: 80px;
   }
   .read__blog {
-    margin-left: span(1);
+    @include span(11);
+    margin-left: span(.5);
+    margin-right: span(.5);
   }
 }
 
@@ -591,62 +621,8 @@
   .article__description {
     padding-bottom: 776px;
   }
-  .read__blog {
-    margin-left: 0;
-    margin-top: 150px;
-  }
-
-}
-
-@media screen and (max-width: 480px) {
-  $susy: (
-          container: 480,
-          container-position: center,
-          columns: 12,
-          gutters: .25,
-          debug: (
-                  image: hide,
-                  color: rgba(#66f, .25),
-                  output: background,
-                  toggle: top right,
-          ),
-  );
-  @include layout($susy float inside);
-
-  .container {
-    @include container(480px);
-  }
-  .inner__container {
-    @include container(480px);
-  }
-  .header__bg {
-    padding-bottom: 398px;
-  }
-
-  .logo__text {
-    font-size: 43px;
-  }
-
-  .who__we__text {
-    padding-right: 0;
-  }
   .team__descr {
-    width: 93%;
-  }
-  .team__member__descr {
-    padding-top: 60px;
-  }
-  .article__description {
-    padding-left: 45px;
-    padding-right: 40px;
-    padding-bottom: 686px;
-  }
-  .read__blog {
-    @include span(11);
-    height: 120px;
-  }
-  .footer {
-    height: 100%;
+    width: 93.4%;
   }
   .contact__div {
     @include span(12);
@@ -654,7 +630,11 @@
   .phone {
     padding-top: 10px;
   }
+  .footer {
+    height: 100%;
+  }
 }
+
 @media screen and (max-width: 483px) {
   $susy: (
           container: 383,
@@ -671,58 +651,99 @@
   @include layout($susy float inside);
 
   .container {
-    @include container(383px);
+    @include container(483px);
   }
   .inner__container {
-    @include container(383px);
+    @include container(483px);
   }
-  .header__bg{
+  .header__bg {
     background-position-x: -630px;
     padding-bottom: 365px;
   }
-  .logo__symbol{
+  .logo__symbol {
     display: none;
   }
-  .about__text{
-    padding-right: 0;
+  .about__text {
+    @include span(12);
     padding-top: 70px;
   }
-  .about__button{
+  .about__button {
     width: 320px;
   }
-  .who__we__second__heading{
+  .who__we__second__heading {
     font-size: 80px;
   }
-  .about__portfolio{
+  .who__we__text{
+    @include span(12);
+    padding-top: 80px;
+  }
+  .about__portfolio {
     @include span(12);
     font-size: 80px;
   }
-  .portfolio__item img{
+  .portfolio__item img {
     height: 400px;
   }
-  .team__descr{
+  .team__member {
+    &--1 {
+      background-position-x: -130px;
+    }
+    &--2 {
+      background-position-x: -191px;
+    }
+    &--3 {
+      background-position-x: -180px;
+    }
+  }
+  .team {
+    @include clearfix();
+    @include span(12);
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .team__item {
+    @include span(12);
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+    &:last-child {
+      @include span(12);
+      margin-left: 0;
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+  .team__descr {
     padding-left: 10px;
     padding-right: 15px;
   }
   .blog {
     @include span(12);
+    padding-left: 0;
+    padding-right: 0;
   }
-  .article__description{
+  .contact{
+    @include span(12);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .article__description {
     padding-left: 20px;
     padding-right: 10px;
-    padding-bottom: 750px;
+    padding-bottom: 650px;
   }
-  .read__blog{
+  .read__blog {
     margin-left: span(.4);
   }
-  .footer{
+  .footer {
     padding-left: 5px;
     padding-right: 0;
   }
-  .footer__info{
+  .footer__info {
     font-size: 25px;
   }
-  .footer__email{
+  .footer__email {
     font-size: 25px;
   }
 }
+

@@ -1,0 +1,42 @@
+$header__linkColor: #d4af37;
+$blueTextColor: rgba(2, 23, 37, .7);
+
+.header__link {
+  font-family: OpenSansSemibold;
+  color: $header__linkColor;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.section__header {
+  font-family: OpenSansSemibold;
+  color: $blueTextColor;
+  font-size: 44px;
+}
+
+.section__text {
+  font-size: 18px;
+  font-family: OpenSansLight;
+  color: $blueTextColor;
+}
+
+.button__text {
+  font-size: 14px;
+  font-family: OpenSansLight;
+  color: $blueTextColor;
+}
+
+.button {
+  @extend .button__text;
+  cursor: pointer;
+  background-color: #fff;
+  width: 240px;
+  height: 55px;
+  border: 1px solid #000000;
+  outline: none;
+  &:active {
+    -webkit-box-shadow: 1px 1px 1px black;
+    -moz-box-shadow: 1px 1px 1px black;
+    box-shadow: 1px 1px 1px black;
+  }
+}

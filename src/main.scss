@@ -1,0 +1,45 @@
+@import "~compass-mixins/lib/compass";
+@import "~compass-mixins/lib/compass/reset";
+@import "~compass-mixins/lib/compass/css3/font-face";
+@import "~susy/sass/susy";
+@import "~font-awesome/css/font-awesome.min.css";
+
+@import "fonts/fonts";
+@import "common/common";
+@import "index/header/header";
+@import "index/about/about";
+@import "index/blog/blog";
+@import "index/contact/contact";
+
+
+//==================================================================================
+// responsive
+//==================================================================================
+
+@import "index/responsive";
+
+//==================================================================================
+// End of responsive
+//==================================================================================
+
+
+$susy: (
+        container: 1170,
+        container-position: center,
+        columns: 12,
+        gutters: .25,
+        debug: (
+                image: hide,
+                color: rgba(#66f, .25),
+                output: background,
+                toggle: top right,
+        ),
+);
+@include layout($susy float inside);
+
+.container{
+  @include container(1170px);
+}
+.inner__container {
+  @include container(769px);
+}

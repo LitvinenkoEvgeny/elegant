@@ -567,18 +567,18 @@
       padding-left: 0;
     }
   }
-  .article__description{
+  .article__description {
     padding-left: 30px;
     padding-top: 50px;
     padding-right: 80px;
   }
-  .team__descr{
+  .team__descr {
     padding-bottom: 20px;
   }
-  .team__member__descr{
+  .team__member__descr {
     padding-top: 50px;
   }
-  .about__text{
+  .about__text {
     @include span(12);
     padding-top: 80px;
   }
@@ -621,7 +621,7 @@
   .article__description {
     padding-bottom: 776px;
   }
-  .team__descr{
+  .team__descr {
     width: 93.4%;
   }
   .contact__div {
@@ -634,6 +634,7 @@
     height: 100%;
   }
 }
+
 @media screen and (max-width: 483px) {
   $susy: (
           container: 383,
@@ -650,10 +651,10 @@
   @include layout($susy float inside);
 
   .container {
-    @include container(383px);
+    @include container(483px);
   }
   .inner__container {
-    @include container(383px);
+    @include container(483px);
   }
   .header__bg {
     background-position-x: -630px;
@@ -663,7 +664,7 @@
     display: none;
   }
   .about__text {
-    padding-right: 0;
+    @include span(12);
     padding-top: 70px;
   }
   .about__button {
@@ -672,6 +673,10 @@
   .who__we__second__heading {
     font-size: 80px;
   }
+  .who__we__text{
+    @include span(12);
+    padding-top: 80px;
+  }
   .about__portfolio {
     @include span(12);
     font-size: 80px;
@@ -679,15 +684,33 @@
   .portfolio__item img {
     height: 400px;
   }
-  .team__member{
+  .team__member {
     &--1 {
-      background-position-x: -100px;
+      background-position-x: -150px;
     }
     &--2 {
-      background-position-x: -151px;
+      background-position-x: -191px;
     }
     &--3 {
-      background-position-x: -140px;
+      background-position-x: -180px;
+    }
+  }
+  .team {
+    @include clearfix();
+    @include span(12);
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .team__item {
+    @include span(12);
+    margin-left: 0;
+    padding-right: 0;
+    padding-left: 0;
+    &:last-child {
+      @include span(12);
+      margin-left: 0;
+      padding-right: 0;
+      padding-left: 0;
     }
   }
   .team__descr {
@@ -696,11 +719,18 @@
   }
   .blog {
     @include span(12);
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .contact{
+    @include span(12);
+    padding-left: 0;
+    padding-right: 0;
   }
   .article__description {
     padding-left: 20px;
     padding-right: 10px;
-    padding-bottom: 750px;
+    padding-bottom: 650px;
   }
   .read__blog {
     margin-left: span(.4);
@@ -717,114 +747,3 @@
   }
 }
 
-@media screen and (max-width: 480px) {
-  $susy: (
-          container: 480,
-          container-position: center,
-          columns: 12,
-          gutters: .25,
-          debug: (
-                  image: hide,
-                  color: rgba(#66f, .25),
-                  output: background,
-                  toggle: top right,
-          ),
-  );
-  @include layout($susy float inside);
-
-  .container {
-    @include container(480px);
-  }
-  .inner__container {
-    @include container(480px);
-  }
-  .header__bg {
-    padding-bottom: 398px;
-  }
-
-  .logo__text {
-    font-size: 43px;
-  }
-
-  .who__we__text {
-    padding-right: 0;
-  }
-  .team__descr {
-    width: 93%;
-  }
-  .team__member__descr {
-    padding-top: 60px;
-  }
-  .article__description {
-    padding-left: 45px;
-    padding-right: 40px;
-    padding-bottom: 686px;
-  }
-  .read__blog {
-    @include span(11);
-    height: 120px;
-  }
-}
-
-@media screen and (max-width: 383px) {
-  $susy: (
-          container: 383,
-          container-position: center,
-          columns: 12,
-          gutters: .25,
-          debug: (
-                  image: hide,
-                  color: rgba(#66f, .25),
-                  output: background,
-                  toggle: top right,
-          ),
-  );
-  @include layout($susy float inside);
-
-  .container {
-    @include container(383px);
-  }
-  .inner__container {
-    @include container(383px);
-  }
-  .team__member{
-    &--1{
-      background-position-x: -150px;
-    }
-    &--2 {
-      background-position-x: -200px;
-    }
-    &--3{
-      background-position-x: -180px;
-    }
-  }
-  .article__description{
-    padding-left: 10px;
-    padding-right: 20px;
-  }
-  .team{
-    @include clearfix();
-    @include span(12);
-    padding-right: 0;
-  }
-  .team__item {
-    @include span(12);
-    margin-left: 0;
-    padding-right: 0;
-    padding-left: 0;
-    &:last-child{
-      @include span(12);
-      margin-left: 0;
-      padding-right: 0;
-      padding-left: 0;
-    }
-  }
-  .blog{
-    @include span(12);
-    padding-right: 0;
-  }
-  .contact{
-    @include span(12);
-    padding-right: 0;
-  }
-}

@@ -1,4 +1,7 @@
 maket
+webpack.config.js
+dist
+src
 node_modules
 .idea
 test

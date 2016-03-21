@@ -144,11 +144,18 @@
     padding-top: 220px;
     padding-bottom: 140px;
   }
+  .team__item__image {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    height: 100%;
+  }
   .portfolio__items {
     margin-left: 40px;
   }
   .portfolio__item img {
-    height: 180px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
@@ -325,6 +332,8 @@
   .portfolio__item {
     img {
       @include span(12);
+      padding-left: 0;
+      padding-right: 0;
       height: 560px;
       margin-bottom: 8px;
     }
@@ -350,17 +359,19 @@
   .team__item {
     &:last-child {
       float: left;
+      margin-left: span(.5);
+      padding: 0;
       @include span(11);
-      padding-left: 55px;
-      padding-right: 35px;
     }
     @include span(11);
-    padding-left: 55px;
-    padding-right: 35px;
+    padding: 0;
+    margin-left: span(.5);
   }
   .team__item__image {
-    width: 631px;
     height: 530px;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
     background-size: cover;
   }
 
@@ -655,6 +666,7 @@
     padding-top: 10px;
   }
 }
+
 @media screen and (max-width: 483px) {
   $susy: (
           container: 383,
@@ -676,53 +688,53 @@
   .inner__container {
     @include container(383px);
   }
-  .header__bg{
+  .header__bg {
     background-position-x: -630px;
     padding-bottom: 365px;
   }
-  .logo__symbol{
+  .logo__symbol {
     display: none;
   }
-  .about__text{
+  .about__text {
     padding-right: 0;
     padding-top: 70px;
   }
-  .about__button{
+  .about__button {
     width: 320px;
   }
-  .who__we__second__heading{
+  .who__we__second__heading {
     font-size: 80px;
   }
-  .about__portfolio{
+  .about__portfolio {
     @include span(12);
     font-size: 80px;
   }
-  .portfolio__item img{
+  .portfolio__item img {
     height: 400px;
   }
-  .team__descr{
+  .team__descr {
     padding-left: 10px;
     padding-right: 15px;
   }
   .blog {
     @include span(12);
   }
-  .article__description{
+  .article__description {
     padding-left: 20px;
     padding-right: 10px;
     padding-bottom: 750px;
   }
-  .read__blog{
+  .read__blog {
     margin-left: span(.4);
   }
-  .footer{
+  .footer {
     padding-left: 5px;
     padding-right: 0;
   }
-  .footer__info{
+  .footer__info {
     font-size: 25px;
   }
-  .footer__email{
+  .footer__email {
     font-size: 25px;
   }
 }

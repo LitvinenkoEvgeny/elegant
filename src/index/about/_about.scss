@@ -100,6 +100,7 @@
 }
 
 .team__item {
+  background-color: #f9f9f9;
   @include span(4 of 12);
   &:last-child {
     @include span(4 of 12 last);

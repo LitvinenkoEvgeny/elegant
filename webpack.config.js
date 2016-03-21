@@ -10,7 +10,7 @@ module.exports = {
   devTool: "source-map",
   output: {
     path: __dirname + "/dist",
-    publicPath: "/dist/",
+    //publicPath: "/dist/",
     filename: '[name].js'
   },
   module: {

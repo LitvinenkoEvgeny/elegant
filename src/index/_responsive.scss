@@ -10,6 +10,21 @@
   }
 }
 
+@media screen and (max-width: 1165px) {
+  .nav__logo {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .hidden__menu {
+    @include span(4 of 12);
+    float: right;
+    margin-right: -1000px;
+  }
+  .menu__list__item {
+    padding-left: 20px;
+  }
+}
+
 @media screen and (max-width: 1120px) {
   $susy: (
           container: 1120,
@@ -43,6 +58,11 @@
   }
   .menu {
     margin-right: span(1);
+  }
+  .hidden__menu {
+    @include span(6 of 12);
+    float: right;
+    padding-left: 150px;
   }
   .header__text {
     padding-top: 300px;
@@ -673,7 +693,7 @@
   .who__we__second__heading {
     font-size: 80px;
   }
-  .who__we__text{
+  .who__we__text {
     @include span(12);
     padding-top: 80px;
   }
@@ -722,7 +742,7 @@
     padding-left: 0;
     padding-right: 0;
   }
-  .contact{
+  .contact {
     @include span(12);
     padding-left: 0;
     padding-right: 0;

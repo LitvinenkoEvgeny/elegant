@@ -4,14 +4,16 @@ header.header__bg
 			.logo
 				.logo__symbol e
 				h1.logo__text elegant
+
 			.menu
-				span menu
-				i.fa.fa-bars.menu__icon
+				.hamburger__menu
+					.bar
+			.menu__wrapper
 				.hidden__menu
-					ul
-						li: a(href="/dist/index.html") home
-						li: a(href="/dist/about.html") about
-						li: a(href="/dist/blog.html") blog
+					ul.menu__list
+						li.menu__list__item: a(href="/dist/index.html").hidden__link home
+						li.menu__list__item: a(href="/dist/about.html").hidden__link about
+						li.menu__list__item: a(href="/dist/blog.html").hidden__link blog
 		h1.header__text Say
 			span.italic  Haloa
 			|  to your Portfolio

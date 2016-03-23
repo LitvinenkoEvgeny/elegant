@@ -1,10 +1,18 @@
+@import "./header-animation";
+
+$bar-width: 50px;
+$bar-height: 3px;
+$bar-spacing: 14px;
+
 .header__bg {
   background-image: url("./images/header-bg.jpg");
   background-size: 100%;
+  overflow-x: hidden;
 }
 
 .nav__logo {
   padding-top: 10px;
+  @include clearfix();
 }
 
 .logo {
@@ -36,6 +44,61 @@
   font-size: 16px;
   font-family: OpenSansSemibold;
   padding-top: 13px;
+  cursor: pointer;
+}
+
+.hamburger__menu {
+  margin: auto;
+  width: $bar-width;
+  height: $bar-height + $bar-spacing * 2;
+  cursor: pointer;
+}
+
+.bar,
+.bar:after,
+.bar:before {
+  width: $bar-width;
+  height: $bar-height;
+}
+
+.bar {
+  position: relative;
+  transform: translateY($bar-spacing);
+  background-color: rgba(255, 255, 255, 1);
+  transition: all 0ms 300ms;
+  &.animate {
+    background: rgba(255, 255, 255, 0);
+  }
+}
+
+.bar:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: $bar-spacing;
+  background: rgba(255, 255, 255, 1);
+  transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bar:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: $bar-spacing;
+  background: rgba(255, 255, 255, 1);
+  transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bar.animate:after {
+  top: 0;
+  transform: rotate(45deg);
+  transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
+}
+
+.bar.animate:before {
+  bottom: 0;
+  transform: rotate(-45deg);
+  transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);;
 }
 
 .menu__icon {

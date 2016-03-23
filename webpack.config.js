@@ -58,9 +58,14 @@ module.exports = {
         loader: "url?limit=10000&mimetype=image/svg+xml"
       }
     ]
-  }
-  //plugins: [
+  },
+  plugins: [
   //  new ExtractTextPlugin("[name].css")
-  //]
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery',
+      'window.jQuery': 'jquery'
+    })
+  ]
 };
 

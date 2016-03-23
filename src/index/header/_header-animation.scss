@@ -1,10 +1,29 @@
-.hidden__menu {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility .5s, opacity .5s linear;
+.hidden__link {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffffff;
+  padding-right: 50px;
+  line-height: 58px;
+  font-size: 16px;
+  font-family: OpenSansSemibold;
+  &:hover {
+    color: darken(#ffffff, 40%);
+  }
 }
 
-.hidden__menu.open {
-  visibility: visible;
-  opacity: 1;
+.hidden__menu {
+  @include span(3 of 12 last);
+  @include clearfix();
+  margin-right: -1000px;
+  height: 58px;
+  display: inline-block;
+  transition: margin .7s ease;
+  li {
+    float: left;
+  }
 }
+.hidden__menu.open{
+  margin-right: 0;
+}
+
+
